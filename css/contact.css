@@ -1,0 +1,564 @@
+/* ==============================
+   GLOBAL
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    background:#fffdf9;
+    color:#18375d;
+
+}
+
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+header{
+
+    height:85px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 70px;
+
+    background:white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+
+}
+
+
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    color:#18375d;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:#18375d;
+
+    font-size:17px;
+
+    margin-left:35px;
+
+    font-weight:600;
+
+}
+
+
+
+nav a:hover{
+
+    color:#c94c4c;
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   HERO SECTION
+============================== */
+
+
+.contact-hero{
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:70px;
+
+    padding:80px 100px;
+
+
+}
+
+
+
+
+.hero-image img{
+
+
+    width:280px;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+.hero-content{
+
+
+    max-width:550px;
+
+
+}
+
+
+
+
+.hero-content h1{
+
+
+    font-size:55px;
+
+    color:#18375d;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.hero-content p{
+
+
+    font-size:19px;
+
+    line-height:1.7;
+
+    color:#555;
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+button{
+
+
+    background:#c94c4c;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+
+}
+
+
+
+button:hover{
+
+
+    background:#18375d;
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   CONTACT MAIN SECTION
+============================== */
+
+
+
+.contact-section{
+
+
+    display:flex;
+
+    gap:70px;
+
+    padding:70px 100px;
+
+
+}
+
+
+
+
+.contact-info,
+.contact-form{
+
+
+    width:50%;
+
+
+}
+
+
+
+
+.contact-info h2,
+.contact-form h2{
+
+
+    font-size:35px;
+
+    margin-bottom:35px;
+
+    color:#18375d;
+
+
+}
+
+
+
+
+
+
+/* ==============================
+   INFO CARDS
+============================== */
+
+
+
+.info-card{
+
+
+    background:white;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.info-card h3{
+
+
+    color:#c94c4c;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.info-card p{
+
+
+    color:#555;
+
+    font-size:17px;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   FORM BOX
+============================== */
+
+
+.contact-form{
+
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,0.10);
+
+
+}
+
+
+
+
+
+
+input,
+textarea{
+
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+
+}
+
+
+
+input:focus,
+textarea:focus{
+
+
+    border-color:#18375d;
+
+
+}
+
+
+
+
+textarea{
+
+
+    height:150px;
+
+    resize:none;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   BOTTOM IMAGE SECTION
+============================== */
+
+
+.contact-image{
+
+
+    text-align:center;
+
+    padding:70px 20px;
+
+
+}
+
+
+
+
+.contact-image img{
+
+
+    width:250px;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.contact-image h2{
+
+
+    color:#18375d;
+
+    font-size:35px;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+.contact-image p{
+
+
+    color:#555;
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+
+footer{
+
+
+    background:#18375d;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+footer p{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+
+@media(max-width:900px){
+
+
+.contact-hero,
+.contact-section{
+
+
+    flex-direction:column;
+
+    padding:50px 30px;
+
+
+}
+
+
+
+.contact-info,
+.contact-form{
+
+
+    width:100%;
+
+
+}
+
+
+
+.hero-content h1{
+
+
+    font-size:40px;
+
+
+}
+
+
+
+header{
+
+
+    padding:0 30px;
+
+
+}
+
+
+
+nav a{
+
+
+    margin-left:15px;
+
+    font-size:14px;
+
+
+}
+
+
+}
