@@ -4,563 +4,1621 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laxmi Foods</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="OMG Laxmi Foods — food manufacturing, product development, millet-based noodles, private labelling, OEM and innovative food solutions.">
 
+    <title>OMG Laxmi Foods | Food Manufacturing & Innovation</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet"
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Homepage CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 
 <body>
 
-<div class="container">
+<div class="page-shell">
 
-<!-- SIDEBAR -->
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
 
-<aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
 
-<div class="logo">
-<h1>Laxmi<span>Foods</span></h1>
+        <div class="sidebar-top">
+
+            <!-- MAIN BRAND -->
+            <a href="index.html" class="brand-logo">
+
+                <!-- Replace with your actual LFbg logo -->
+                <div class="lf-logo-wrap">
+                    <img src="images/LFbg.png"
+                         alt="OMG Laxmi Foods Logo"
+                         onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback');">
+
+                    <span class="fallback-logo">OMG</span>
+                </div>
+
+                <div class="brand-name">
+                    <strong>OMG</strong>
+                    <span>Laxmi Foods</span>
+                </div>
+
+            </a>
+
+
+            <!-- EIYA SMALL BRAND -->
+            <div class="sidebar-eiya">
+
+                <span class="sidebar-eiya-label">OUR CONSUMER BRAND</span>
+
+                <img src="images/eiyaabg.png"
+                     alt="Eiya"
+                     onerror="this.style.display='none';">
+
+            </div>
+
+
+            <div class="sidebar-label">
+                EXPLORE
+            </div>
+
+
+            <ul class="sidebar-nav">
+
+                <li class="active">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        <i class="fa-solid fa-box-open"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html#about">
+                        <i class="fa-solid fa-building"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html#capabilities">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Capabilities</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="recipes.html">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Recipes</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="brands.html">
+                        <i class="fa-solid fa-tags"></i>
+                        <span>Our Brands</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <p>
+                Good food starts<br>
+                with a good idea.
+            </p>
+
+            <div class="socials">
+
+                <a href="https://instagram.com"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://facebook.com"
+                   aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://youtube.com"
+                   aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://linkedin.com"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MOBILE HEADER
+    ====================================================== -->
+
+    <header class="mobile-header">
+
+        <a href="index.html" class="mobile-logo">
+
+            <strong>OMG</strong>
+            Laxmi Foods
+
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main" id="home">
+
+
+        <!-- =================================================
+             TOP NAVIGATION
+        ================================================== -->
+
+        <nav class="top-nav">
+
+            <div class="breadcrumb">
+
+                <span>OMG Laxmi Foods</span>
+
+                <i class="fa-solid fa-angle-right"></i>
+
+                <strong>Home</strong>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <a href="recipes.html">
+                    Recipes
+                </a>
+
+                <a href="contact.html" class="nav-cta">
+
+                    Let's Talk
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-decoration hero-circle"></div>
+
+            <div class="hero-text reveal">
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    FOOD MANUFACTURING • INNOVATION
+
+                </div>
+
+
+                <h1>
+
+                    Traditional
+                    <span>grains.</span>
+
+                    <br>
+
+                    Modern
+                    <span>goodness.</span>
+
+                </h1>
+
+
+                <p class="hero-lead">
+
+                    At <strong>OMG Laxmi Foods</strong>, we bring together
+                    food manufacturing, product development and ingredient-led
+                    innovation to create food products made for changing
+                    consumer needs.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="products.html"
+                       class="btn btn-primary">
+
+                        Explore Products
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="about.html"
+                       class="btn btn-outline">
+
+                        Discover Our Story
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-mini-stats">
+
+                    <div>
+                        <strong>Since 2020</strong>
+                        <span>Building food possibilities</span>
+                    </div>
+
+                    <div>
+                        <strong>Innovation</strong>
+                        <span>Traditional grains & modern formats</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image reveal delay-1">
+
+                <div class="hero-image-frame">
+
+                    <img src="images/intro.jpeg"
+                         alt="OMG Laxmi Foods products">
+
+                    <div class="hero-floating-card">
+
+                        <i class="fa-solid fa-wheat-awn"></i>
+
+                        <div>
+                            <strong>Grain-led</strong>
+                            <span>Food innovation</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK NAVIGATION
+        ================================================== -->
+
+        <section class="quick-nav section">
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <span class="small-label">
+                        EXPLORE OMG LAXMI FOODS
+                    </span>
+
+                    <h2>
+                        Start with
+                        <span>what matters.</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    Get to know our story, capabilities, journey and
+                    values — all in one place.
+                </p>
+
+            </div>
+
+
+            <div class="quick-grid">
+
+                <a href="about.html#about"
+                   class="quick-card reveal">
+
+                    <span>01</span>
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h3>About Us</h3>
+
+                    <p>
+                        Who we are and what drives us.
+                    </p>
+
+                    <b>
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </b>
+
+                </a>
+
+
+                <a href="about.html#capabilities"
+                   class="quick-card reveal delay-1">
+
+                    <span>02</span>
+
+                    <i class="fa-solid fa-industry"></i>
+
+                    <h3>Capabilities</h3>
+
+                    <p>
+                        From ideas to market-ready food products.
+                    </p>
+
+                    <b>
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </b>
+
+                </a>
+
+
+                <a href="about.html#journey"
+                   class="quick-card reveal delay-2">
+
+                    <span>03</span>
+
+                    <i class="fa-solid fa-route"></i>
+
+                    <h3>Our Journey</h3>
+
+                    <p>
+                        The thinking behind everything we build.
+                    </p>
+
+                    <b>
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </b>
+
+                </a>
+
+
+                <a href="about.html#values"
+                   class="quick-card reveal delay-3">
+
+                    <span>04</span>
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <h3>Our Values</h3>
+
+                    <p>
+                        Principles that are part of our recipe.
+                    </p>
+
+                    <b>
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </b>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FEATURED PRODUCTS
+        ================================================== -->
+
+        <section class="products-section section"
+                 id="products">
+
+            <div class="section-heading products-heading reveal">
+
+                <div>
+
+                    <span class="small-label">
+                        OUR PRODUCTS
+                    </span>
+
+                    <h2>
+                        Made for
+                        <span>everyday meals.</span>
+                    </h2>
+
+                </div>
+
+                <div class="slider-controls">
+
+                    <button class="slider-btn product-prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+                    <button class="slider-btn product-next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-slider-wrapper">
+
+                <div class="product-track" id="productTrack">
+
+
+                    <article class="product-slide">
+
+                        <div class="product-image">
+
+                            <img src="images/ragi noodle.jpeg"
+                                 alt="Ragi Noodles">
+
+                            <span class="product-tag">
+                                MILLET
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>01 / NOODLES</span>
+
+                            <h3>Ragi Noodles</h3>
+
+                            <p>
+                                A millet-based noodle option inspired
+                                by the goodness of ragi.
+                            </p>
+
+                            <a href="product-details.html">
+                                View Product
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-slide">
+
+                        <div class="product-image">
+
+                            <img src="images/jowar noodle.jpeg"
+                                 alt="Jowar Noodles">
+
+                            <span class="product-tag">
+                                MILLET
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>02 / NOODLES</span>
+
+                            <h3>Jowar Noodles</h3>
+
+                            <p>
+                                A wholesome everyday noodle concept
+                                using the goodness of jowar.
+                            </p>
+
+                            <a href="product-details.html">
+                                View Product
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-slide">
+
+                        <div class="product-image">
+
+                            <img src="images/multi millet noodle.jpeg"
+                                 alt="Multi Millet Noodles">
+
+                            <span class="product-tag">
+                                FEATURED
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>03 / NOODLES</span>
+
+                            <h3>Multi Millet Noodles</h3>
+
+                            <p>
+                                A blend of nutritious millets developed
+                                for modern everyday meals.
+                            </p>
+
+                            <a href="product-details.html">
+                                View Product
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-slide">
+
+                        <div class="product-image">
+
+                            <img src="images/atta noodle.jpeg"
+                                 alt="Atta Noodles">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>04 / NOODLES</span>
+
+                            <h3>Atta Noodles</h3>
+
+                            <p>
+                                Familiar wheat goodness in a
+                                convenient noodle format.
+                            </p>
+
+                            <a href="product-details.html">
+                                View Product
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-slide">
+
+                        <div class="product-image">
+
+                            <img src="images/egg noodles.jpeg"
+                                 alt="Egg Noodles">
+
+                            <span class="product-tag">
+                                PROTEIN
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>05 / NOODLES</span>
+
+                            <h3>Egg Noodles</h3>
+
+                            <p>
+                                A protein-focused noodle option
+                                for versatile meals.
+                            </p>
+
+                            <a href="product-details.html">
+                                View Product
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-slide">
+
+                        <div class="product-image">
+
+                            <img src="images/barnyard noodles.jpeg"
+                                 alt="Barnyard Noodles">
+
+                            <span class="product-tag">
+                                MILLET
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>06 / NOODLES</span>
+
+                            <h3>Barnyard Noodles</h3>
+
+                            <p>
+                                Traditional grain inspiration
+                                in a modern noodle format.
+                            </p>
+
+                            <a href="product-details.html">
+                                View Product
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="product-slide">
+
+                        <div class="product-image">
+
+                            <img src="images/instant noodle.jpeg"
+                                 alt="Instant Noodles">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span>07 / NOODLES</span>
+
+                            <h3>Instant Noodles</h3>
+
+                            <p>
+                                Convenient noodles created for
+                                quick everyday meals.
+                            </p>
+
+                            <a href="product-details.html">
+                                View Product
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <div class="slider-dots" id="sliderDots"></div>
+
+
+            <div class="center-link">
+
+                <a href="products.html" class="text-link">
+
+                    Explore Complete Product Range
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MILLET SECTION
+        ================================================== -->
+
+        <section class="millet-section section">
+
+            <div class="millet-background"></div>
+
+            <div class="millet-content reveal">
+
+                <span class="millet-label">
+
+                    🌾 THE MILLET MOVEMENT
+
+                </span>
+
+
+                <h2>
+
+                    Ancient grains.
+                    <br>
+
+                    <span>Reimagined for today.</span>
+
+                </h2>
+
+
+                <p>
+
+                    Millets are finding their way back into modern
+                    kitchens — and we are exploring how these
+                    traditional grains can become part of convenient,
+                    enjoyable everyday foods.
+
+                </p>
+
+
+                <p>
+
+                    Our product development journey includes
+                    <strong>ragi, jowar, barnyard and multi-millet
+                    noodles</strong>, along with blended grain concepts
+                    that combine nutrition-focused ingredients with
+                    familiar formats.
+
+                </p>
+
+
+                <div class="millet-points">
+
+                    <div>
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                        <span>
+                            Millet-based products
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-wheat-awn"></i>
+
+                        <span>
+                            Multi-millet blends
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-bowl-food"></i>
+
+                        <span>
+                            Everyday noodle formats
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="products.html"
+                   class="millet-btn">
+
+                    Explore Millet Products
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="millet-visual reveal delay-1">
+
+                <div class="millet-orbit orbit-a"></div>
+                <div class="millet-orbit orbit-b"></div>
+
+                <div class="millet-circle">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                    <strong>MILLET</strong>
+
+                    <span>
+                        GOODNESS
+                    </span>
+
+                </div>
+
+
+                <div class="millet-floating millet-one">
+                    RAGI
+                </div>
+
+                <div class="millet-floating millet-two">
+                    JOWAR
+                </div>
+
+                <div class="millet-floating millet-three">
+                    MULTI-MILLET
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EIYA
+        ================================================== -->
+
+        <section class="eiyaa-section section">
+
+            <div class="eiyaa-visual reveal">
+
+                <div class="eiyaa-pattern"></div>
+
+                <div class="eiyaa-logo-card">
+
+                    <!-- Actual Eiya logo -->
+                    <img src="images/eiyaabg.png"
+                         alt="Eiya Logo">
+
+                </div>
+
+
+                <span class="eiyaa-floating">
+                    EVERYDAY NOODLES
+                </span>
+
+            </div>
+
+
+            <div class="eiyaa-content reveal delay-1">
+
+                <span class="small-label">
+                    OUR CONSUMER BRAND
+                </span>
+
+
+                <h2>
+
+                    Meet
+                    <span>Eiya.</span>
+
+                </h2>
+
+
+                <h3>
+                    Everyday noodles,
+                    thoughtfully reimagined.
+                </h3>
+
+
+                <p>
+
+                    Eiya is the consumer-facing noodle brand
+                    from <strong>OMG Laxmi Foods</strong>, created
+                    around a simple idea — to make everyday noodles
+                    convenient, enjoyable and increasingly aligned
+                    with modern food preferences.
+
+                </p>
+
+
+                <p>
+
+                    While noodles have always been loved for their
+                    simplicity and versatility, Eiya gives us a
+                    platform to explore what comes next. Our product
+                    development journey looks at traditional grains,
+                    millet-based recipes, multigrain combinations
+                    and protein-enriched concepts to create new
+                    possibilities for everyday meals.
+
+                </p>
+
+
+                <p>
+
+                    From familiar favourites to innovative grain-led
+                    formats, Eiya represents our consumer-facing
+                    approach to food — combining convenience,
+                    flavour and continuous product exploration.
+
+                </p>
+
+
+                <div class="eiyaa-points">
+
+                    <div>
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                        <span>
+                            Ingredient-led innovation
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-wheat-awn"></i>
+
+                        <span>
+                            Traditional grains & millets
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-bowl-food"></i>
+
+                        <span>
+                            Made for everyday meals
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="brands.html"
+                   class="eiyaa-btn">
+
+                    Discover Eiya
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHY US
+        ================================================== -->
+
+        <section class="why-section section">
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <span class="small-label">
+                        WHY OMG LAXMI FOODS
+                    </span>
+
+                    <h2>
+                        Built around
+                        <span>better possibilities.</span>
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Food manufacturing works best when the
+                    manufacturer understands the product,
+                    the brand and the business behind it.
+
+                </p>
+
+            </div>
+
+
+            <div class="why-grid">
+
+                <article class="why-card reveal">
+
+                    <span>01</span>
+
+                    <i class="fa-solid fa-industry"></i>
+
+                    <h3>
+                        Manufacturing
+                    </h3>
+
+                    <p>
+                        Production support designed around
+                        consistency, practicality and the needs
+                        of the product.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card featured reveal delay-1">
+
+                    <span>02</span>
+
+                    <i class="fa-solid fa-flask"></i>
+
+                    <h3>
+                        Product Development
+                    </h3>
+
+                    <p>
+                        Turning food ideas into concepts that
+                        are practical, relevant and ready to
+                        move towards the market.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card reveal delay-2">
+
+                    <span>03</span>
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <h3>
+                        Food Innovation
+                    </h3>
+
+                    <p>
+                        Exploring grains, formats and formulations
+                        that respond to changing consumer needs.
+                    </p>
+
+                </article>
+
+
+                <article class="why-card reveal delay-3">
+
+                    <span>04</span>
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                    <h3>
+                        Partnership
+                    </h3>
+
+                    <p>
+                        Working alongside brands and businesses
+                        to build products with purpose.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECIPES
+        ================================================== -->
+
+        <section class="recipes-preview section">
+
+            <div class="recipe-heading reveal">
+
+                <div>
+
+                    <span class="small-label">
+                        FROM OUR KITCHEN
+                    </span>
+
+                    <h2>
+                        Simple ideas.
+                        <span>Great bowls.</span>
+                    </h2>
+
+                </div>
+
+                <a href="recipes.html"
+                   class="text-link">
+
+                    Explore Recipes
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="recipe-grid">
+
+                <a href="recipes.html"
+                   class="recipe-card recipe-one reveal">
+
+                    <div class="recipe-overlay">
+
+                        <span>
+                            QUICK & EASY
+                        </span>
+
+                        <h3>
+                            Everyday noodle bowls
+                        </h3>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                </a>
+
+
+                <a href="recipes.html"
+                   class="recipe-card recipe-two reveal delay-1">
+
+                    <div class="recipe-overlay">
+
+                        <span>
+                            CREATIVE MEALS
+                        </span>
+
+                        <h3>
+                            More ways to enjoy noodles
+                        </h3>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                </a>
+
+
+                <a href="recipes.html"
+                   class="recipe-card recipe-three reveal delay-2">
+
+                    <div class="recipe-overlay">
+
+                        <span>
+                            TRY SOMETHING NEW
+                        </span>
+
+                        <h3>
+                            From pantry to plate
+                        </h3>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             B2B / MANUFACTURING
+        ================================================== -->
+
+        <section class="business-section section">
+
+            <div class="business-copy reveal">
+
+                <span class="small-label light">
+                    FOR BUSINESSES
+                </span>
+
+                <h2>
+                    Have a food idea
+                    <span>worth building?</span>
+                </h2>
+
+                <p>
+
+                    Whether you're creating a new food brand,
+                    expanding your portfolio or exploring a new
+                    product concept, OMG Laxmi Foods can support
+                    your journey from idea to manufacturing.
+
+                </p>
+
+
+                <a href="contact.html"
+                   class="business-btn">
+
+                    Let's Build Together
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="business-services reveal delay-1">
+
+                <a href="about.html#capabilities">
+
+                    <span>01</span>
+
+                    <div>
+                        <strong>Private / White Label</strong>
+                        <small>Build products under your own brand.</small>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="about.html#capabilities">
+
+                    <span>02</span>
+
+                    <div>
+                        <strong>OEM Manufacturing</strong>
+                        <small>Manufacturing support for your product.</small>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="about.html#capabilities">
+
+                    <span>03</span>
+
+                    <div>
+                        <strong>Contract Manufacturing</strong>
+                        <small>Flexible production partnerships.</small>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="about.html#capabilities">
+
+                    <span>04</span>
+
+                    <div>
+                        <strong>Product Development</strong>
+                        <small>From concept to food product.</small>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             OUR BRANDS
+        ================================================== -->
+
+        <section class="brands-section section">
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <span class="small-label">
+                        OUR BRANDS
+                    </span>
+
+                    <h2>
+                        Different ideas.
+                        <span>One food journey.</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    A growing portfolio built around food,
+                    innovation and evolving consumer needs.
+                </p>
+
+            </div>
+
+
+            <div class="brand-logo-grid">
+
+
+                <!-- BRAND LOGO SPACE 1 -->
+
+                <a href="brands.html"
+                   class="brand-logo-box reveal">
+
+                    <img src="images/LFbg.png"
+                         alt="OMG Laxmi Foods">
+
+                    <span>
+                        Parent Company
+                    </span>
+
+                </a>
+
+
+                <!-- BRAND LOGO SPACE 2 -->
+
+                <a href="brands.html"
+                   class="brand-logo-box reveal delay-1">
+
+                    <img src="images/eiyaabg.png"
+                         alt="Eiya">
+
+                    <span>
+                        Consumer Brand
+                    </span>
+
+                </a>
+
+
+                <!-- FUTURE LOGO SPACE -->
+
+                <div class="brand-logo-box empty-logo reveal delay-2">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>
+                        Future Brand
+                    </span>
+
+                </div>
+
+
+                <!-- FUTURE LOGO SPACE -->
+
+                <div class="brand-logo-box empty-logo reveal delay-3">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>
+                        Your Brand
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DISTRIBUTOR CTA
+        ================================================== -->
+
+        <section class="distributor-cta reveal">
+
+            <div>
+
+                <span>
+                    PARTNER WITH US
+                </span>
+
+                <h2>
+                    Let's grow
+                    <strong>together.</strong>
+                </h2>
+
+                <p>
+                    Become a distributor, retailer or business
+                    partner and bring our products to more people.
+                </p>
+
+            </div>
+
+
+            <a href="contact.html">
+
+                Become a Distributor
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <div class="footer-main">
+
+
+                <div class="footer-brand">
+
+                    <div class="footer-logo">
+
+                        <img src="images/LFbg.png"
+                             alt="OMG Laxmi Foods">
+
+                    </div>
+
+                    <h3>
+                        OMG Laxmi Foods
+                    </h3>
+
+                    <p>
+                        Food ideas. Better products.
+                        Everyday possibilities.
+                    </p>
+
+                    <span class="since">
+                        Building food possibilities since 2020.
+                    </span>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Explore
+                    </h4>
+
+                    <a href="index.html">Home</a>
+
+                    <a href="products.html">Products</a>
+
+                    <a href="about.html">About Us</a>
+
+                    <a href="recipes.html">Recipes</a>
+
+                    <a href="brands.html">Our Brands</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Business
+                    </h4>
+
+                    <a href="about.html#capabilities">
+                        Private / White Label
+                    </a>
+
+                    <a href="about.html#capabilities">
+                        OEM Manufacturing
+                    </a>
+
+                    <a href="about.html#capabilities">
+                        Contract Manufacturing
+                    </a>
+
+                    <a href="about.html#capabilities">
+                        Product Development
+                    </a>
+
+                    <a href="contact.html">
+                        Become a Distributor
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Connect
+                    </h4>
+
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+
+                    <a href="https://instagram.com">
+                        Instagram
+                    </a>
+
+                    <a href="https://facebook.com">
+                        Facebook
+                    </a>
+
+                    <a href="https://youtube.com">
+                        YouTube
+                    </a>
+
+                    <a href="https://linkedin.com">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2020–2026 OMG Laxmi Foods.
+                    All Rights Reserved.
+                </span>
+
+                <span>
+                    Made with purpose. Built for better food.
+                </span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
 </div>
 
-<ul>
-
-<li class="active">
-<a href="index.html">
-<i class="fa-solid fa-house"></i> Home
-</a>
-</li>
 
 
-<li>
-<a href="products.html">
-<i class="fa-solid fa-box"></i> Products
-</a>
-</li>
+<!-- BACK TO TOP -->
 
+<button class="back-top"
+        id="backTop"
+        aria-label="Back to top">
 
-<li>
-<a href="products.html">
-<i class="fa-solid fa-star"></i> Best Sellers
-</a>
-</li>
+    <i class="fa-solid fa-arrow-up"></i>
 
-
-<li>
-<a href="about.html">
-<i class="fa-solid fa-seedling"></i> Why Laxmi ?
-</a>
-</li>
-
-
-<li>
-<a href="brands.html">
-<i class="fa-solid fa-store"></i> Brands
-</a>
-</li>
-
-
-<li>
-<a href="contact.html">
-<i class="fa-solid fa-phone"></i> Contact
-</a>
-</li>
-
-<li>
-<a href="shop now.html">
-<i class="fa-solid fa-shop"></i>Shop Now
-</a>
-</li>
-
-</ul>
-
-<div class="sidebar-footer">
-
-<h3>Healthy in every bowl.</h3>
-
-<div class="socials">
-
-<a href="https://facebook.com">
-<i class="fab fa-facebook"></i>
-</a>
-
-<a href="https://instagram.com">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://youtube.com">
-<i class="fab fa-youtube"></i>
-</a>
-
-</div>
-
-</div>
-
-</aside>
-
-<!-- MAIN -->
-
-<div class="main">
-
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="nav-links">
-
-<a href="about.html">About</a>
-
-<a href="brands.html">Brands</a>
-
-<a href="recipes.html">Recipes</a>
-
-<a href="blog.html">Blog</a>
-
-<a href="shop now.html">Shop Now</a>
-
-</div>
-
-<a href="contact.html">
-<button>
-Become Distributor
 </button>
-</a>
 
-</nav>
 
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-text">
-
-<p class="tag">Nutrition, the healthy way.</p>
-
-<h1>
-
-TRADITIONAL<br>
-
-GRAINS.<br>
-
-MODERN<br>
-
-GOODNESS.
-
-</h1>
-
-<p>
-
-Wholesome noodles crafted with premium grains for a healthy lifestyle.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="products.html">
-<button class="primary">
-Explore Products
-</button>
-</a>
-
-
-<a href="about.html">
-<button class="secondary">
-Our Story
-</button>
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img src="images/intro.jpeg">
-
-</div>
-
-</section>
-
-<!-- PRODUCTS -->
-
-<section class="products">
-
-<h2>OUR PRODUCTS</h2>
-<h1>Noodles</h1>
-<h2></h2>
-<div class="cards">
-
-<div class="card">
-
-<img src="images/ragi noodle.jpeg">
-
-<h3>Ragi Noodles</h3>
-
-<p>Rich in calcium & fiber</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/jowar noodle.jpeg">
-
-<h3>Jowar Noodles</h3>
-
-<p>Healthy Everyday Meal</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/instant noodle.jpeg">
-
-<h3>Instant Noodles</h3>
-
-<p>High Protein Recipe</p>
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/atta noodle.jpeg">
-
-<h3>Atta Noodles</h3>
-
-<p>Classic Wheat Taste</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-<div class="card">
-
-<img src="images/multi millet noodle.jpeg">
-
-<h3>Multi Millet Noodles</h3>
-
-<p>Blend of Nutritious Millets</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-<div class="card">
-
-<img src="images/barnyard noodles.jpeg">
-
-<h3>Barnyard Noodles</h3>
-
-<p>Traditional Flavor</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/egg noodles.jpeg">
-
-<h3>Egg Noodles</h3>
-
-<p>Rich in Protein</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-<section class="products">
-
-<h1>Vermicelli & Pasta</h1>
-<h2></h2>
-<div class="cards">
-
-<div class="card">
-
-<img src="images/ragi noodle.jpeg">
-
-<h3>Ragi Noodles</h3>
-
-<p>Rich in calcium & fiber</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/jowar noodle.jpeg">
-
-<h3>Jowar Noodles</h3>
-
-<p>Healthy Everyday Meal</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/instant noodle.jpeg">
-
-<h3>Instant Noodles</h3>
-
-<p>High Protein Recipe</p>
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/atta noodle.jpeg">
-
-<h3>Atta Noodles</h3>
-
-<p>Classic Wheat Taste</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-<div class="card">
-
-<img src="images/multi millet noodle.jpeg">
-
-<h3>Multi Millet Noodles</h3>
-
-<p>Blend of Nutritious Millets</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-<div class="card">
-
-<img src="images/barnyard noodles.jpeg">
-
-<h3>Barnyard Noodles</h3>
-
-<p>Traditional Flavor</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-<div class="card">
-
-<img src="images/egg noodles.jpeg">
-
-<h3>Egg Noodles</h3>
-
-<p>Rich in Protein</p>
-
-<a href="product-details.html">
-<button>
-View Product
-</button>
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<div class="feature">
-
-<i class="fa-solid fa-leaf"></i>
-
-<h3>100% Natural</h3>
-
-<p>No preservatives.</p>
-
-</div>
-
-<div class="feature">
-
-<i class="fa-solid fa-wheat-awn"></i>
-
-<h3>Rich in Nutrition</h3>
-
-<p>High Fiber & Protein.</p>
-
-</div>
-
-<div class="feature">
-
-<i class="fa-solid fa-heart"></i>
-
-<h3>Healthy Lifestyle</h3>
-
-<p>Perfect for everyone.</p>
-
-</div>
-
-<div class="feature">
-
-<i class="fa-solid fa-seedling"></i>
-
-<h3>Traditional Grains</h3>
-
-<p>Power of Millets.</p>
-
-</div>
-
-</section>
-
-<!-- BRAND -->
-
-<section class="brands">
-
-<div class="brand-left">
-
-<h2>
-
-ROOTED IN TRUST.<br>
-
-DRIVEN BY PURPOSE.
-
-</h2>
-
-<p>
-
-Premium products inspired by nature.
-
-Healthy food for modern families.
-
-</p>
-
-</div>
-
-<div class="brand-boxes">
-
-<div class="box">
-
-<h3>Laxmi Foods</h3>
-
-<p>Built on trust.</p>
-
-</div>
-
-<div class="box">
-
-<h3>Healthy Choice</h3>
-
-<p>Everyday nutrition.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-
-<div>
-
-<h2>Join Our Family</h2>
-
-<p>
-
-Become a distributor today.
-
-</p>
-
-</div>
-
-<a href="contact.html">
-<button>
-Partner With Us
-</button>
-</a>
-
-</section>
-
-<footer>
-
-<p>
-
-©2026 Laxmi Foods. All Rights Reserved.
-
-</p>
-
-</footer>
-
-</div>
-
-</div>
 
 <script src="js/script.js"></script>
 
 </body>
-
 </html>
