@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shop EIYA | Our Products</title>
+  <meta name="description" content="Explore the EIYA food collection and discover products for your kitchen.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/products.css">
+
+  <script src="./js/products.js" defer></script>
+</head>
+
+<body class="products-page">
+
+  <!-- Header -->
+  <header class="shop-header">
+    <a class="shop-logo" href="./index.html" aria-label="EIYA homepage">
+      EIYA<span>.</span>
+    </a>
+
+    <nav class="shop-nav" aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a href="./products.html" class="active">Shop</a>
+      <a href="./about.html">About</a>
+      <a href="./recipes.html">Recipes</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+
+    <button class="cart-toggle" id="cart-toggle" type="button"
+      aria-label="View shopping cart">
+      Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="shop-hero">
+      <div class="shop-hero-content">
+        <p class="eyebrow">WELCOME TO EIYA</p>
+        <h1>Good food.<br><span>Good choices.</span></h1>
+        <p>
+          Discover our collection of food products made for your everyday
+          kitchen and the moments you love sharing.
+        </p>
+        <a href="#catalogue" class="shop-hero-button">Explore the collection ↓</a>
+      </div>
+
+      <div class="shop-hero-decoration" aria-hidden="true">
+        <span>EIYA</span>
+        <span>Made for your table</span>
+      </div>
+    </section>
+
+    <!-- Catalogue -->
+    <section class="catalogue section-padding" id="catalogue">
+      <div class="catalogue-heading">
+        <div>
+          <p class="eyebrow">THE EIYA COLLECTION</p>
+          <h2>Find your favourites</h2>
+          <p class="catalogue-subtitle">
+            Explore the collection and find something for your kitchen.
+          </p>
+        </div>
+        <p class="product-total" id="product-total" aria-live="polite"></p>
+      </div>
+
+      <div class="catalogue-controls">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input
+            type="search"
+            id="product-search"
+            placeholder="Search products..."
+            aria-label="Search products"
+          >
+        </label>
+
+        <label class="sort-box">
+          <span>Sort by</span>
+          <select id="product-sort" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="category-filters" id="category-filters"
+        aria-label="Filter by category">
+        <button class="category-button active" type="button" data-category="all">
+          All products
+        </button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <p class="catalogue-loading">Loading the EIYA collection...</p>
+      </div>
+
+      <p class="empty-products" id="empty-products" hidden>
+        No products found. Try another search or category.
+      </p>
+    </section>
+
+    <!-- Brand message -->
+    <section class="shop-note">
+      <p class="eyebrow">A LITTLE SOMETHING FROM EIYA</p>
+      <h2>Bring something lovely to your table.</h2>
+      <a href="./about.html" class="shop-note-link">Get to know EIYA →</a>
+    </section>
+  </main>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+
+  <aside class="cart-drawer" id="cart-drawer"
+    role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">YOUR EIYA SELECTION</p>
+        <h2 id="cart-title">Your cart</h2>
+      </div>
+      <button type="button" id="cart-close" class="cart-close"
+        aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">₹0.00</strong>
+      </div>
+      <p class="cart-disclaimer">
+        Delivery charges and final totals will be confirmed at checkout.
+      </p>
+      <button class="checkout-button" id="checkout-button" type="button">
+        Continue to checkout
+      </button>
+      <p class="cart-message" id="cart-message" aria-live="polite"></p>
+    </div>
+  </aside>
+
+  <footer class="shop-footer">
+    <a class="shop-logo footer-logo" href="./index.html">EIYA<span>.</span></a>
+    <p>Good food. Good choices.</p>
+    <div class="footer-links">
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./recipes.html">Recipes</a>
+    </div>
+    <p class="footer-copy">© <span id="current-year"></span> EIYA. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
