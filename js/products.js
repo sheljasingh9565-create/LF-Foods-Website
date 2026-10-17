@@ -2,50 +2,85 @@
 /* =========================================
    EIYA PRODUCTS PAGE
    Catalogue, search, sorting and demo cart
-
-   IMPORTANT:
-   Replace the sample products below with
-   verified EIYA product details and prices.
 ========================================= */
 
 "use strict";
 
-// STEP 1: Add your real product information here.
-// Image paths are examples; replace them with your actual files
-// inside your existing images folder.
+// Product information
 
 const EIYA_PRODUCTS = [
   {
     id: "eiya-product-001",
-    name: "Product One",
-    category: "Everyday Essentials",
-    description: "Add the actual product description here.",
-    price: 199,
-    weight: "Replace with pack size",
-    image: "./images/product-one.jpg",
+    name: "Egg Noodles",
+    category: "Noodles",
+    description: "Add the verified Egg Noodles product description here.",
+    price: 600,
+    weight: "Pack size to be confirmed",
+    image: "./images/egg noodles.jpeg",
     available: true
   },
   {
     id: "eiya-product-002",
-    name: "Product Two",
-    category: "Snacks",
-    description: "Add the actual product description here.",
-    price: 149,
-    weight: "Replace with pack size",
-    image: "./images/product-two.jpg",
+    name: "Atta Noodles",
+    category: "Noodles",
+    description: "Add the verified Atta Noodles product description here.",
+    price: 700,
+    weight: "Pack size to be confirmed",
+    image: "./images/atta noodle.jpeg",
     available: true
   },
   {
     id: "eiya-product-003",
-    name: "Product Three",
+    name: "Barnyard Millet",
+    category: "Millets",
+    description: "Add the verified Barnyard Millet product description here.",
+    price: 100,
+    weight: "Pack size to be confirmed",
+    image: "./images/barnyard noodles.jpeg",
+    available: true
+  },
+  {
+    id: "eiya-product-004",
+    name: "Instant Noodles",
     category: "Noodles",
-    description: "Add the actual product description here.",
-    price: 99,
-    weight: "Replace with pack size",
-    image: "./images/product-three.jpg",
+    description: "Add the verified Instant Noodles product description here.",
+    price: 200,
+    weight: "Pack size to be confirmed",
+    image: "./images/instant noodle.jpeg",
+    available: true
+  },
+  {
+    id: "eiya-product-005",
+    name: "Ragi",
+    category: "Millets",
+    description: "Add the verified Ragi product description here.",
+    price: 300,
+    weight: "Pack size to be confirmed",
+    image: "./images/ragi noodle.jpeg",
+    available: true
+  },
+  {
+    id: "eiya-product-006",
+    name: "Jowar",
+    category: "Millets",
+    description: "Add the verified Jowar product description here.",
+    price: 400,
+    weight: "Pack size to be confirmed",
+    image: "./images/jowar noodle.jpeg",
+    available: true
+  },
+  {
+    id: "eiya-product-007",
+    name: "Multi Millet Noodles",
+    category: "Noodles",
+    description: "Add the verified Multi Millet Noodles product description here.",
+    price: 500,
+    weight: "Pack size to be confirmed",
+    image: "./images/multi millet noodle.jpeg",
     available: true
   }
 ];
+
 
 const CART_STORAGE_KEY = "eiya_demo_cart_v1";
 
@@ -66,10 +101,19 @@ const cartSubtotal = document.getElementById("cart-subtotal");
 const checkoutButton = document.getElementById("checkout-button");
 const cartMessage = document.getElementById("cart-message");
 
+// Toast notification elements
+const cartToast = document.getElementById("cart-toast");
+const toastTitle = document.getElementById("toast-title");
+const toastMessage = document.getElementById("toast-message");
+const toastClose = document.getElementById("toast-close");
+
 let activeCategory = "all";
 let searchTerm = "";
 let cart = loadCart();
+let toastTimer;
+let buttonTimer;
 
+// Format prices in Indian Rupees
 function formatPrice(amount) {
   return new Intl.NumberFormat("en-IN", {
     style: "currency",
@@ -78,6 +122,7 @@ function formatPrice(amount) {
   }).format(amount);
 }
 
+// Escape HTML before inserting product details
 function escapeHTML(value) {
   return String(value).replace(/[&<>"']/g, character => ({
     "&": "&amp;",
@@ -88,8 +133,7 @@ function escapeHTML(value) {
   })[character]);
 }
 
-// Demo-only browser storage.
-// A real store will load cart and stock data through the backend.
+// Demo-only browser storage
 function loadCart() {
   try {
     const saved = JSON.parse(
@@ -129,7 +173,7 @@ function saveCart() {
     );
   } catch {
     cartMessage.textContent =
-      "Your browser could not save the cart. Please check your browser settings.";
+      "Your browser could not save the cart. Check browser settings.";
   }
 }
 
@@ -144,12 +188,37 @@ function getCartSubtotal() {
   }, 0);
 }
 
-// Create category buttons automatically.
+// Show the Add to Cart success notification
+function showCartToast(productName) {
+  if (!cartToast || !toastTitle || !toastMessage) {
+    cartMessage.textContent = `${productName} added to your cart.`;
+    return;
+  }
+
+  toastTitle.textContent = "Added to Cart!";
+  toastMessage.textContent = `${productName} added successfully.`;
+
+  cartToast.classList.add("show");
+
+  clearTimeout(toastTimer);
+
+  toastTimer = setTimeout(() => {
+    cartToast.classList.remove("show");
+  }, 3000);
+}
+
+// Close notification when its close button is clicked
+if (toastClose && cartToast) {
+  toastClose.addEventListener("click", () => {
+    cartToast.classList.remove("show");
+    clearTimeout(toastTimer);
+  });
+}
+
+// Create category buttons
 function renderCategories() {
-  const categories = [
-    "all",
-    ...new Set(EIYA_PRODUCTS.map(product => product.category))
-  ];
+
+    const categories = ["all", "Millets", "Noodles"];
 
   categoryFilters.innerHTML = categories.map(category => `
     <button
@@ -163,6 +232,7 @@ function renderCategories() {
   `).join("");
 }
 
+// Search, filter and sort products
 function getVisibleProducts() {
   const filtered = EIYA_PRODUCTS.filter(product => {
     const matchesCategory =
@@ -176,9 +246,8 @@ function getVisibleProducts() {
       product.weight
     ].join(" ").toLowerCase();
 
-    const matchesSearch = searchContent.includes(searchTerm);
-
-    return matchesCategory && matchesSearch;
+    return matchesCategory &&
+      searchContent.includes(searchTerm);
   });
 
   switch (productSort.value) {
@@ -198,6 +267,7 @@ function getVisibleProducts() {
   return filtered;
 }
 
+// Display product cards
 function renderProducts() {
   const products = getVisibleProducts();
 
@@ -247,7 +317,8 @@ function renderProducts() {
   `).join("");
 }
 
-function addToCart(productId) {
+// Add product to cart
+function addToCart(productId, button) {
   const product = EIYA_PRODUCTS.find(p => p.id === productId);
 
   if (!product || !product.available) return;
@@ -269,8 +340,25 @@ function addToCart(productId) {
   renderCart();
 
   cartMessage.textContent = `${product.name} added to your cart.`;
+
+  // Display success toast
+  showCartToast(product.name);
+
+  // Briefly change the clicked button
+  if (button) {
+    clearTimeout(buttonTimer);
+
+    button.textContent = "✓ Added!";
+    button.classList.add("added");
+
+    buttonTimer = setTimeout(() => {
+      button.textContent = "Add to cart +";
+      button.classList.remove("added");
+    }, 1500);
+  }
 }
 
+// Change item quantity
 function changeQuantity(productId, change) {
   const item = cart.find(entry => entry.id === productId);
 
@@ -288,6 +376,7 @@ function changeQuantity(productId, change) {
   renderCart();
 }
 
+// Remove an item
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
 
@@ -295,6 +384,7 @@ function removeFromCart(productId) {
   renderCart();
 }
 
+// Render cart contents and count
 function renderCart() {
   cartCount.textContent = String(getCartQuantity());
   cartSubtotal.textContent = formatPrice(getCartSubtotal());
@@ -360,6 +450,7 @@ function renderCart() {
   }).join("");
 }
 
+// Open and close cart drawer
 function openCart() {
   cartDrawer.hidden = false;
   cartOverlay.hidden = false;
@@ -374,7 +465,7 @@ function closeCart() {
   cartToggle.focus();
 }
 
-// Search and sorting.
+// Search and sorting
 productSearch.addEventListener("input", event => {
   searchTerm = event.target.value.trim().toLowerCase();
   renderProducts();
@@ -382,7 +473,7 @@ productSearch.addEventListener("input", event => {
 
 productSort.addEventListener("change", renderProducts);
 
-// Event delegation for product and category buttons.
+// Category filters
 categoryFilters.addEventListener("click", event => {
   const button = event.target.closest("[data-category]");
   if (!button) return;
@@ -392,13 +483,15 @@ categoryFilters.addEventListener("click", event => {
   renderProducts();
 });
 
+// Add-to-cart buttons
 productGrid.addEventListener("click", event => {
   const button = event.target.closest("[data-add-to-cart]");
   if (!button) return;
 
-  addToCart(button.dataset.addToCart);
+  addToCart(button.dataset.addToCart, button);
 });
 
+// Cart quantity and remove buttons
 cartItems.addEventListener("click", event => {
   const quantityButton = event.target.closest("[data-quantity-id]");
   const removeButton = event.target.closest("[data-remove-id]");
@@ -415,7 +508,7 @@ cartItems.addEventListener("click", event => {
   }
 });
 
-// Cart controls.
+// Cart controls
 cartToggle.addEventListener("click", openCart);
 cartClose.addEventListener("click", closeCart);
 cartOverlay.addEventListener("click", closeCart);
@@ -424,18 +517,24 @@ document.addEventListener("keydown", event => {
   if (event.key === "Escape" && !cartDrawer.hidden) {
     closeCart();
   }
+
+  if (event.key === "Escape" && cartToast) {
+    cartToast.classList.remove("show");
+    clearTimeout(toastTimer);
+  }
 });
 
-// Checkout is intentionally not connected to a payment gateway yet.
+// Demo-only checkout
 checkoutButton.addEventListener("click", () => {
   cartMessage.textContent =
-    "Demo cart only: checkout will be enabled after we connect the secure backend.";
+    "Demo cart only: checkout will be enabled after the secure backend is connected.";
 });
 
+// Footer year
 document.getElementById("current-year").textContent =
   new Date().getFullYear();
 
-// Initial render.
+// Initial page render
 renderCategories();
 renderProducts();
 renderCart();

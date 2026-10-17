@@ -50,7 +50,9 @@
           Discover our collection of food products made for your everyday
           kitchen and the moments you love sharing.
         </p>
-        <a href="#catalogue" class="shop-hero-button">Explore the collection ↓</a>
+        <a href="#catalogue" class="shop-hero-button">
+          Explore the collection ↓
+        </a>
       </div>
 
       <div class="shop-hero-decoration" aria-hidden="true">
@@ -59,7 +61,7 @@
       </div>
     </section>
 
-    <!-- Catalogue -->
+    <!-- Product Catalogue -->
     <section class="catalogue section-padding" id="catalogue">
       <div class="catalogue-heading">
         <div>
@@ -96,7 +98,8 @@
 
       <div class="category-filters" id="category-filters"
         aria-label="Filter by category">
-        <button class="category-button active" type="button" data-category="all">
+        <button class="category-button active" type="button"
+          data-category="all">
           All products
         </button>
       </div>
@@ -110,17 +113,20 @@
       </p>
     </section>
 
-    <!-- Brand message -->
+    <!-- Brand Message -->
     <section class="shop-note">
       <p class="eyebrow">A LITTLE SOMETHING FROM EIYA</p>
       <h2>Bring something lovely to your table.</h2>
-      <a href="./about.html" class="shop-note-link">Get to know EIYA →</a>
+      <a href="./about.html" class="shop-note-link">
+        Get to know EIYA →
+      </a>
     </section>
   </main>
 
-  <!-- Cart drawer -->
+  <!-- Cart Overlay -->
   <div class="cart-overlay" id="cart-overlay" hidden></div>
 
+  <!-- Cart Drawer -->
   <aside class="cart-drawer" id="cart-drawer"
     role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
 
@@ -140,26 +146,53 @@
         <span>Subtotal</span>
         <strong id="cart-subtotal">₹0.00</strong>
       </div>
+
       <p class="cart-disclaimer">
         Delivery charges and final totals will be confirmed at checkout.
       </p>
+
       <button class="checkout-button" id="checkout-button" type="button">
         Continue to checkout
       </button>
+
       <p class="cart-message" id="cart-message" aria-live="polite"></p>
     </div>
   </aside>
 
+  <!-- Footer -->
   <footer class="shop-footer">
-    <a class="shop-logo footer-logo" href="./index.html">EIYA<span>.</span></a>
+    <a class="shop-logo footer-logo" href="./index.html">
+      EIYA<span>.</span>
+    </a>
     <p>Good food. Good choices.</p>
+
     <div class="footer-links">
       <a href="./about.html">About</a>
       <a href="./contact.html">Contact</a>
       <a href="./recipes.html">Recipes</a>
     </div>
-    <p class="footer-copy">© <span id="current-year"></span> EIYA. All rights reserved.</p>
+
+    <p class="footer-copy">
+      © <span id="current-year"></span> EIYA. All rights reserved.
+    </p>
   </footer>
+
+  <!-- Add to Cart Success Toast -->
+  <div id="cart-toast" class="cart-toast"
+    role="status" aria-live="polite" aria-atomic="true">
+
+    <span class="toast-check" aria-hidden="true">✓</span>
+
+    <div class="toast-content">
+      <strong id="toast-title">Added to Cart!</strong>
+      <p id="toast-message">Your product was added successfully.</p>
+    </div>
+
+    <button id="toast-close" type="button"
+      aria-label="Dismiss notification">
+      &times;
+    </button>
+  </div>
 
 </body>
 </html>
